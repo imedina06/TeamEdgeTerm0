@@ -49,18 +49,37 @@ function promptUser(){
     return reply
 
 }
+[]
+["9","k"]
 
-function checkAnswer(){
+let s = "asddff"
+s[2]
 
+
+function checkAnswer(reply){             
+    const replywords = reply.split(" "); "add", "milk"
+    let item = replywords[1];
+    let command = replywords[0]
+
+if (command == add ) {
+    addItem(replywords);
+        console.log(item)
+}
+
+if (promptUser()=="remove")  {
+    removeItem();
+}
 
 }
 
-function addItem(){
+function addItem(item){
 //this function can take in a string and store it in an array
-
+console.log()
 }
 
 function removeItem(){
 
 
 }
+
+console.log(list)

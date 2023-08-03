@@ -19,10 +19,10 @@
 
 console.log("-------------------  SUPERHERO !!  -------------------")
 
-const DELAY = 3000
+const DELAY = 2000
 const DAMAGE_LIMIT = 5
 const MAJOR_BLOW = DAMAGE_LIMIT -2
-const LIVES_TOP_RANGE = 60
+const LIVES_TOP_RANGE = 80
 const LIVES_BOTTOM_RANGE = 40
 let rounds = 1
 let gameIsOn = true
@@ -94,26 +94,25 @@ class Superhero {
 
 //COMMENT 6....
 let batman = new Superhero()
-batman.name="Batman 🦸‍♂️"
+batman.name="Spiderman 🦸‍♂️"
 batman.isAlive = true 
 batman.lives=[]
-batman.taunts=["The Dark Knight always wins!" , "You can't hang with the bat man" , "Meet my fist, scumbag" , "You Suck!"]
-batman.cries=["Ouch!" , "UFF!" , "Gaaaaaaa" , "No!!!!!"]
+batman.taunts=["Anyone can win a fight when the odds are easy!!" , "You Suck!", "Don't mess with the Spider!"]
+batman.cries=["Ouch!", "Gaaaaaaa" , "No!!!!!"]
 batman.fillHealth()
  
 let joker = new Superhero()
-joker.name = "Joker 🦹‍♂️"
+joker.name = "Dr. Octopus 🦹‍♂️"
 joker.isAlive = true
 joker.lives=[]
-joker.taunts =["You are a schmemer" , "Don't mess with the Joker!" , "Pick your face off the ground, you might need it!", "Getting tired of the beatings?"]
-joker.cries = ["Aaaa!" , "Goh!" , "Hmph!" ,"You will pay for this"]
-joker.fillHealth()
+joker.taunts =["You've Stuck Your Webs Into My Business For The Last Time!" , "Don't mess with the Octopus!"] , 
+joker.cries = ["Aaaa!", "Hmph!" ,"You will pay for this"],
+joker.fillHealth(),
 
-
-console.log(`${joker.name} :  ${joker.lives} - ${joker.lives.length}`)
-console.log(`${batman.name} : ${batman.lives} -  ${batman.lives.length} `)
-console.log(`${batman.name} 💬 ${batman.taunts[1]}  \n `)
-console.log(`${joker.name} 💬 ${joker.taunts[1]}  \n `)
+console.log(`${joker.name} :  ${joker.lives} - ${joker.lives.length}`),
+console.log(`${batman.name} : ${batman.lives} -  ${batman.lives.length} `),
+console.log(`${batman.name} 💬 ${batman.taunts[1]}  \n `),
+console.log(`${joker.name} 💬 ${joker.taunts[1]}  \n `),
 
 
 //COMMENT 7....
@@ -135,7 +134,7 @@ function randomInteger(min, max) {
 
 
   //COMMENT 8....
-  let timer = setInterval(function() {
+  function battle () {
 
     if(gameIsOn){
         
@@ -144,4 +143,5 @@ function randomInteger(min, max) {
 
 
     }
-}, DELAY);
+}
+  let timer = setInterval(battle, DELAY);

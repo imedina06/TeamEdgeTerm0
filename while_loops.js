@@ -34,12 +34,19 @@ ww      ww hhhhhh  iii lll ee   e    lll oo  oo oo  oo ppp  pp s
 console.log("------------------- CHALLENGE 1 : IN YOUR PRIME -------------------")
 
  //Here is a humble while loop in action. We need a variable to hold the counter value.
-let num = 0
-while(num <= 10){
+//let num = 0
+//while(num <= 10){
+//console.log("example counter--> " + num)
+//num++
+//}
 
-console.log("example counter--> " + num)
-num++
+let num1 = 10
+while(num1<=30){
+  console.log("show me num1 " + num1)
+  num1++
 }
+
+
 //-->TODO: Declare a while loop that prints all the prime numbers between 0 and 100, use test_prime() helper function
 
 

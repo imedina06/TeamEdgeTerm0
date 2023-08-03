@@ -21,15 +21,27 @@ console.log("------------------- CHALLENGE 1 : COUNTER -------------------")
 
 //this array logs every number between 0 and 10, using the index i
 
-for(let i = 0 ; i <=10 ; i++) {
+//for(let i = 0 ; i <=10 ; i--){
+   // console.log(i)
+//} //makes numbers  1-10  appear
 
-    console.log("Counter at: " + i)
+//for(let i = 10; i > 0; i++){
+    //console.log(i)
+//}
+
+//for(let i = 0 ; i <=10 ; i++) {
+
+    //console.log("Counter at: " + i)
    
-   }
+  // }
 
 //-->TODO: Write a loop that prints a happy birthday message for every year you have been alive.
 
+const currentAge =  17;
 
+for(let year =1; year < currentAge; year++){
+    console.log(`year  ${year} Happy Birthday${currentAge}`)
+}
 
 console.log("------------------- CHALLENGE 2 : ITERATOR ----------------------")
 
@@ -43,15 +55,17 @@ for(let i = 0 ; i< colors.length; i ++) {
 }
 
 //-->TODO: Declare an array with at least 10 animals. You provide the animals.
-let animals = []
+let animals = ['lion','tiger','whale','dog','cat','giraffe']
 
 //-->TODO: Log all the animals in the array with a for loop. 
-
+for(let i = 0 ; i< animals.length; i++){
+    console.log("The animals are: " + animals[i])
+}
 
 console.log("------------------- CHALLENGE 3 : DEBUG -------------------------")
 
 //-->TODO: fix this code so it no longer logs the last item as undefined...
-for(let i = 0 ; i<= colors.length; i ++) {
+for(let i = 0 ; i< colors.length; i ++) {
 
     console.log("The color is: " + colors[i])
 }
@@ -59,7 +73,7 @@ for(let i = 0 ; i<= colors.length; i ++) {
 //-->TODO: fix this code! What could be wrong? It should print out the 5 times tables all the way to 12.
 
 console.log("Behold...the 5 times table: ")
-for(let i = 0 ; i > 12;  i++) {
+for(let i = 0 ; i <= 12;  i++) {
 
     console.log(` 5 x ${i} =  ` + i*5 )
      
@@ -71,30 +85,41 @@ function logArray(array){
 
     for(let i = 0 ; i<array.length ; i++){
 
-        console.log(i)
+        console.log(array[i])
     }
 }
-
+logArray(animals)
  
 
 console.log("------------------- CHALLENGE 4 : EVEN COUNTDOWN ------------------")
 
 
 // This makes a random number between 0-50
-let random = Math.floor(Math.random() * 51); //
+//let random = Math.floor(Math.random() * 51); //
 
 //this if/else statement checks if the number is even using the modulo operator (%)
-if(random % 2 == 0){
+//if(random % 2 == 0){
 
-    console.log(random + " is even!")
-}else {
+    //console.log(random + " is even!")
+//}else {
 
-    console.log(random + " is odd!")
-}
+    //console.log(random + " is odd!")
+//}
 
 //-->TODO: Write a function that counts BACKWARDS from 100 and logs only odd numbers
+//let random = Math.floor(Math.random() * 101);
+
+//if(random %  3 == 0){
+  //  console.log(random + "is odd")
+//}
 
 
+let num = 100
+while(num >0){
+    if(num %  2 == 1){
+        console.log(num)}
+num--
+}
 //-->TODO: Write a function that counts BACKWARDS from the given random number and logs only even numbers
 
 
@@ -111,9 +136,14 @@ if(colors.includes(color)){
 }
 
 //-->TODO Declare an array of any strings you  want: cities, friends, movies, etc.
-
+let cities = ['Oakland','Hayward','Berkeley','San Leandro','San Francisco']
 
 //-->TODO Prompt the user to "Guess" if an element is present. Store their response in a varaible
+function promptUser(){
+
+    let  cities = READLINE.question("Give me a city name! >>  ")
+
+    return cities
 
 
 //-->TODO Write function to prompt the user and see if the element is present. If so, print CONGRATULATIONS!
